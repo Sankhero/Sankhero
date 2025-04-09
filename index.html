@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mirror text</title>
+	<style>
+	body {
+		font-family: sans-serif;
+		padding: 40px; 
+		background: #f9f9f9;
+	}
+	input {
+	display: block;
+	margin-bottom: 20px;
+	width: 300px;
+	padding: 10px;
+	font-size: 16px;
+	}
+	</style>
+</head>
+<body>
+	<h1>Mirror Text Box</h1>
+
+	<input id="inputBox" type="text" placeholder="Type here..." />
+
+	<input id="outputBox" type="text" disabled />
+
+	<script>
+	const inputBox = document.getElementById('inputBox');
+	const outputBox = document.getElementById('outputBox');
+
+	inputBox.addEventListener('input', () => {
+	outputBox.value = inputBox.value;
+	});
+	</script>
+
+</body>
+</html>
